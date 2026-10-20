@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andaman — Creative Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <a href="#home" class="logo">
+            Portfolio
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#projects">Projects</a>
+            <a href="#experience">Journey</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <header id="home" class="hero">
+
+        <div class="decor deer hero-deer">🦌</div>
+        <div class="decor bunny hero-bunny">🐇</div>
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Digital Business · Creative · Marketing
+            </div>
+
+            <h1>
+                Hello, I'm<br>
+                <span>Andaman Akaraprida</span>
+            </h1>
+
+            <p class="hero-description">
+                A digital business student who loves turning ideas
+                into brands, experiences, and meaningful digital
+                projects.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="button button-dark">
+                    Explore my work
+                    <span>→</span>
+                </a>
+
+                <a href="#contact" class="button button-light">
+                    Let's connect ♡
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="assets/Fintech.jpg" alt="Portrait">
+        </div>
+
+        <div class="hero-decoration flower-one">✿</div>
+        <div class="hero-decoration flower-two">❀</div>
+
+    </header>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects" class="projects section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                MY WORK
+            </span>
+
+            <h2>
+                Things I've created
+            </h2>
+
+            <p>
+                A collection of brands, business concepts,
+                university projects and creative experiments.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="branding">
+                Branding
+            </button>
+
+            <button class="filter" data-filter="business">
+                Business
+            </button>
+
+            <button class="filter" data-filter="marketing">
+                Marketing
+            </button>
+
+            <button class="filter" data-filter="project">
+                Project
+            </button>
+
+            <button class="filter" data-filter="web development">
+                Web Development
+            </button>
+
+
+
+        </div>
+
+
+        <!-- PROJECT CARDS -->
+
+        <div class="project-grid">
+
+
+            <!-- ABELA -->
+
+            <article class="project-card"
+                data-category="branding business marketing project">
+
+            <div class="project-image abela">
+                <span class="project-number">01</span>
+
+            <img
+                src="assets/AbelaCosmeticsLogo.png"
+                alt="Abela Cosmetics project"
+                class="project-cover contain-image"
+            >
+            </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Branding · Marketing
+                    </span>
+
+                    <h3>
+                        Abela Cosmetics
+                    </h3>
+
+                    <p>
+                        Building a student beauty brand from
+                        product concept to branding and
+                        digital marketing.
+                    </p>
+
+                    <a href="https://linktr.ee/abela_.cosmetics?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacF4m8JA5Bm97AviITDfpLI0hVmLxSth6pRTWBLYuCOndRbi59oSbgYpAS8mg_aem_HsWfq4r4d2Z6UYSM7WUGXQ" 
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        View →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VEZRYN -->
+
+            <article class="project-card"
+                data-category="branding business marketing project">
+
+                <div class="project-image vezryn">
+                    <span class="project-number">02</span>
+                    
+                    <img
+                    src="assets/VEZRYN.jpg"
+                    alt="VEZRYN"
+                    class="project-cover contain-image"
+                >
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Branding · Fashion
+                    </span>
+
+                    <h3>
+                        VEZRYN
+                    </h3>
+
+                    <p>
+                        A mythology-inspired fitness fashion
+                        brand exploring identity, symbolism
+                        and global positioning.
+                    </p>
+
+                    <a href="https://velanorrx.github.io/VEZRYN/index.html" 
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        View →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- GENTLE HOUSE -->
+
+            <article class="project-card"
+                data-category="business">
+
+                <div class="project-image gentle guesthouse">
+                    <span class="project-number">03</span>
+                    
+                    <img
+                    src="assets/GentleGuesthouse.png"
+                    alt="Gentle Guesthouse"
+                    class="project-cover contain-image"
+                >
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Hospitality · Business
+                    </span>
+
+                    <h3>
+                        Gentle Guesthouse
+                    </h3>
+
+                    <p>
+                        A hospitality business concept exploring
+                        guest experience, booking systems and
+                        digital operations.
+                    </p>
+
+                    <a href="https://www.google.com/search?q=gentle+guesthouse&oq=gentle+guesthouse+&gs_lcrp=EgZjaHJvbWUyCggAEEUYFhgeGDkyBggBECMYJzIICAIQABgWGB4yCAgDEAAYFhgeMgoIBBAAGAgYDRgeMg0IBRAAGIYDGIAEGIoFMgcIBhAAGO8FMgoIBxAAGIAEGKIEMgcICBAAGO8FMgoICRAAGIAEGKIE0gEINTU2OWowajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8" 
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        View →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- UX -->
+
+            <article class="project-card"
+                data-category="business marketing project">
+
+                <div class="project-image maemorr fortune">
+                    <span class="project-number">04</span>
+                    
+                    <img
+                    src="assets/MaemorrFortune.jpg"
+                    alt="Maemorr Fortune"
+                    class="project-cover contain-image"
+                >
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Digital Marketing Class Project
+                    </span>
+
+                    <h3>
+                        Maemorr Fortune
+                    </h3>
+
+                    <p>
+                        A digital fortune-telling page focused on horoscope readings, spiritual insights, and social media engagement, combining content creation with digital branding to connect with audiences online.
+                    </p>
+
+                    <a href="https://www.facebook.com/MaemorrFortune/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        View →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BTS -->
+
+            <article class="project-card"
+                data-category="project">
+
+                <div class="project-image volunteer">
+                    <span class="project-number">05</span>
+                    
+                    <img
+                    src="assets/Volunteer.jpg"
+                    alt="Volunteer"
+                    class="project-cover contain-image"
+                >
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Volunteer · University Course
+                    </span>
+
+                    <h3>
+                        Elderly Home Support Volunteer
+                    </h3>
+
+                    <p>
+                        Organized a community volunteer project to support elderly residents by fundraising for essential supplies, donating necessities, providing meals, and hosting fun activities to encourage social connection and bring joy to the residents.
+                    </p>
+
+                    <a href="https://drive.google.com/drive/folders/1b0d_eljzDklc7bIJ64en2aeR8yr_w3Gq?usp=drive_link"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                        View →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MARKETING -->
+
+            <article class="project-card"
+                data-category="Project">
+
+                <div class="project-image project">
+                    <span class="project-number">06</span>
+                    
+                    <img
+                    src="assets/PawkinsVeterinary.png"
+                    alt="Pawkins"
+                    class="project-cover contain-image"
+                >
+                </div>
+
+                <div class="project-content">
+
+                    <span class="project-category">
+                        Volunteer · University Course
+                    </span>
+
+
+                    <h3>
+                        Vet & Pet Care Booking System
+                    </h3>
+
+                    <p>
+                        Designed and developed a veterinary and pet care website with an integrated appointment booking system, combining user-friendly interface design, database management, and booking functionality to streamline pet care services.
+                    </p>
+
+                    <a href="https://velanorrx.github.io/Pawkins/"
+                    class="project-link"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    >
+                        View →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOURNEY ================= -->
+
+    <section id="experience" class="journey section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                MY JOURNEY
+            </span>
+
+            <h2>
+                Where I've been
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ✦
+                </div>
+
+                <div>
+
+                    <span class="timeline-category">
+                        HIGH SCHOOL · SWEDEN 
+                    </span>
+
+                    <h3>
+                        Technology Programme · Cybergymnasiet Malmö
+                    </h3>
+
+                    <span class="timeline-date">
+                        2020 - 2021
+                    </span>
+
+                    <p>
+                        Studied the Technology Programme in Malmö, Sweden, developing foundational skills in coding, 3D design, and Swedish.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ♡
+                </div>
+
+                <div>
+
+                    <span class="timeline-category">
+                        ACADEMIC MILESTONE
+                    </span>
+
+                    <h3>
+                        GED Graduate
+                    </h3>
+
+                    <span class="timeline-date">
+                        2022
+                    </span>
+
+                    <p>
+                        Achieved a GED score of 609/800, completing an important academic milestone before pursuing university studies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot">
+                    ✦
+                </div>
+
+                <div>
+
+                    <span class="timeline-category">
+                        EXPECTED 2027
+                    </span>
+
+                    <h3>
+                        Digital Business · PSU
+                    </h3>
+
+                    <span class="timeline-date">
+                        2023 - Present
+                    </span>
+
+                    <p>
+                        Studying at the College of Computing, Prince of Songkla University, developing skills in branding, digital marketing, data analytics, coding, web design, and database management.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <div class="contact-decoration bunny">
+            🐇
+        </div>
+
+        <div class="contact-decoration deer">
+            🦌
+        </div>
+
+        <span class="section-label">
+            SAY HELLO
+        </span>
+
+        <h2>
+            Let's create<br>
+            something lovely
+        </h2>
+
+        <p>
+            Whether you want to work together, talk about
+            an idea, or simply say hello — my inbox is open.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="mailto:a.andaman26@email.com">
+                Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/andaman-akaraprida/"
+            class="contact"
+            target="_blank"
+            rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="tel:+66920913155">
+                Tel
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+            © 2026 Andaman Akaraprida
+        </div>
+
+        <div>
+            made with ♡
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

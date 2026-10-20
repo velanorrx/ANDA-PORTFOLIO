@@ -1,0 +1,1463 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --brown-dark: #4a3026;
+    --brown: #705044;
+    --brown-light: #9b7868;
+
+    --cream: #f8f2e9;
+    --cream-dark: #eee2d3;
+
+    --white: #fffdf9;
+
+    --pink: #ead4cd;
+    --green: #9b9c82;
+
+    --text: #4a3932;
+    --text-light: #806c62;
+
+    --shadow:
+        0 15px 40px rgba(74, 48, 38, 0.10);
+
+    --radius: 26px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+
+    width: 100%;
+
+    padding:
+        20px
+        7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(248, 242, 233, 0.88);
+
+    backdrop-filter:
+        blur(14px);
+
+    border-bottom:
+        1px solid
+        rgba(74,48,38,.05);
+
+}
+
+.logo {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 26px;
+
+    font-weight: 600;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.logo span {
+    color: var(--brown-light);
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 32px;
+
+}
+
+.nav-links a {
+
+    font-size: 14px;
+
+    color: var(--text-light);
+
+    transition:
+        .3s ease;
+
+}
+
+.nav-links a:hover {
+
+    color:
+        var(--brown-dark);
+
+}
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    color:
+        var(--brown-dark);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding:
+        160px
+        8%
+        100px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.hero-content {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+.eyebrow {
+
+    display: inline-block;
+
+    padding:
+        9px
+        16px;
+
+    margin-bottom: 25px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--cream-dark);
+
+    border-radius: 100px;
+
+    font-size: 13px;
+
+    color:
+        var(--brown);
+
+}
+
+.hero h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(65px, 10vw, 125px);
+
+    line-height: .92;
+
+    letter-spacing:
+        -5px;
+
+    font-weight: 500;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.hero h1 span {
+
+    color:
+        var(--brown-light);
+
+    font-style: italic;
+
+}
+
+.hero-description {
+
+    max-width: 600px;
+
+    margin-top: 35px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color:
+        var(--text-light);
+
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 35px;
+
+}
+
+.button {
+
+    padding:
+        14px
+        23px;
+
+    border-radius: 100px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        .3s ease;
+
+}
+
+.button-dark {
+
+    background:
+        var(--brown-dark);
+
+    color: white;
+
+}
+
+.button-dark:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+.button-light {
+
+    background:
+        var(--white);
+
+    border:
+        1px solid
+        var(--cream-dark);
+
+    color:
+        var(--brown-dark);
+
+}
+
+.button-light:hover {
+
+    background:
+        var(--cream-dark);
+
+}
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.decor {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    z-index: 2;
+
+}
+
+.deer {
+
+    font-size: 60px;
+
+}
+
+.bunny {
+
+    font-size: 50px;
+
+}
+
+.hero-deer {
+
+    right: 8%;
+
+    bottom: 60px;
+
+}
+
+.hero-bunny {
+
+    left: 5%;
+
+    bottom: 45px;
+
+}
+
+.hero-decoration {
+
+    position: absolute;
+
+    color:
+        var(--brown-light);
+
+    opacity: .35;
+
+}
+
+.flower-one {
+
+    right: 22%;
+
+    top: 30%;
+
+    font-size: 30px;
+
+}
+
+.flower-two {
+
+    left: 42%;
+
+    bottom: 15%;
+
+    font-size: 25px;
+
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section {
+
+    padding:
+        110px
+        8%;
+
+    position: relative;
+
+}
+
+.section-heading {
+
+    margin-bottom: 55px;
+
+}
+
+.section-label {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--brown-light);
+
+}
+
+.section-heading h2 {
+
+    margin-top: 10px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(42px, 5vw, 65px);
+
+    font-weight: 500;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.section-heading p {
+
+    margin-top: 15px;
+
+    max-width: 600px;
+
+    line-height: 1.8;
+
+    color:
+        var(--text-light);
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+
+    background:
+        var(--white);
+
+}
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.3fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+.about-image {
+
+    min-height: 430px;
+
+    border-radius:
+        45px;
+
+    background:
+        var(--cream);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.about-circle {
+
+    width: 270px;
+
+    height: 270px;
+
+    background:
+        var(--cream-dark);
+
+    border-radius: 50%;
+
+    position: absolute;
+
+}
+
+.about-animal {
+
+    font-size: 130px;
+
+    position: relative;
+
+    z-index: 2;
+
+    filter:
+        drop-shadow(
+            0 15px 15px
+            rgba(74,48,38,.12)
+        );
+
+}
+
+.about-caption {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    white-space: nowrap;
+
+    font-size: 12px;
+
+    color:
+        var(--brown-light);
+
+}
+
+.about-caption span {
+
+    margin: 0 8px;
+
+}
+
+.about-content h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    color:
+        var(--brown-dark);
+
+    margin-bottom: 22px;
+
+}
+
+.about-content p {
+
+    max-width: 620px;
+
+    line-height: 1.9;
+
+    color:
+        var(--text-light);
+
+    margin-bottom: 17px;
+
+}
+
+.skills {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+}
+
+.skills span {
+
+    padding:
+        9px
+        15px;
+
+    background:
+        var(--cream);
+
+    border-radius: 100px;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects {
+
+    background:
+        var(--cream);
+
+}
+
+.filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+
+}
+
+.filter {
+
+    border:
+        1px solid
+        var(--cream-dark);
+
+    background:
+        var(--white);
+
+    padding:
+        9px
+        17px;
+
+    border-radius: 100px;
+
+    color:
+        var(--text-light);
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
+
+}
+
+.filter:hover,
+.filter.active {
+
+    background:
+        var(--brown-dark);
+
+    border-color:
+        var(--brown-dark);
+
+    color: white;
+
+}
+
+
+/* PROJECT GRID */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+.project-card {
+
+    background:
+        var(--white);
+
+    border-radius:
+        var(--radius);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(74,48,38,.05);
+
+    transition:
+        .35s ease;
+
+}
+
+.project-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image {
+
+    height: 310px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+.project-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.25);
+
+}
+
+.project-image span {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.project-number {
+
+    position: absolute !important;
+
+    top: 18px;
+
+    left: 18px;
+
+    padding:
+        7px
+        11px;
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    font-size: 11px;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.project-icon {
+
+    font-size: 70px;
+
+}
+
+
+/* PROJECT COLORS */
+
+.project-image.abela {
+    background: #d9bcb0;
+}
+
+.project-image.vezryn {
+    background: #34302d;
+}
+
+.project-image.gentle {
+    background: #d9d2c2;
+}
+
+.project-image.ux {
+    background: #d9dfd0;
+}
+
+.project-image.bts {
+    background: #cbbfb2;
+}
+
+.project-image.marketing {
+    background: #ead8cf;
+}
+
+
+/* PROJECT CONTENT */
+
+.project-content {
+
+    padding:
+        25px;
+
+}
+
+.project-category {
+
+    color:
+        var(--brown-light);
+
+    text-transform:
+        uppercase;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+.project-content h3 {
+
+    margin:
+        8px 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.project-content p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color:
+        var(--text-light);
+
+}
+
+.project-link {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.project-link:hover {
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey {
+
+    background:
+        var(--white);
+
+}
+
+.timeline {
+
+    max-width: 850px;
+
+    border-left:
+        1px solid
+        var(--cream-dark);
+
+    padding-left: 40px;
+
+}
+
+.timeline-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.timeline-item > div:not(.timeline-dot) {
+    width: 100%;
+    min-width: 0;
+}
+
+.timeline-dot {
+
+    position: absolute;
+
+    left: -51px;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background:
+        var(--cream);
+
+    border:
+        1px solid
+        var(--cream-dark);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        var(--brown);
+
+    font-size: 10px;
+
+}
+
+.timeline-date {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color:
+        var(--brown-light);
+
+}
+
+.timeline-item h3 {
+
+    margin:
+        8px 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    color:
+        var(--brown-dark);
+
+}
+
+.timeline-item p {
+
+    max-width: 650px;
+
+    line-height: 1.8;
+
+    color:
+        var(--text-light);
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+
+    padding:
+        130px 8%;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        var(--brown-dark);
+
+    color: white;
+
+}
+
+.contact .section-label {
+
+    color:
+        var(--pink);
+
+}
+
+.contact h2 {
+
+    margin-top: 12px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 7vw, 80px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+}
+
+.contact p {
+
+    max-width: 600px;
+
+    margin:
+        25px auto;
+
+    line-height: 1.8;
+
+    color:
+        #d7c8c0;
+
+}
+
+.contact-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+}
+
+.contact-buttons a {
+
+    padding:
+        13px
+        22px;
+
+    background:
+        white;
+
+    color:
+        var(--brown-dark);
+
+    border-radius: 100px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        .3s ease;
+
+}
+
+.contact-buttons a:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+.contact-decoration {
+
+    position: absolute;
+
+    opacity: .3;
+
+}
+
+.contact .bunny {
+
+    left: 8%;
+
+    top: 20%;
+
+}
+
+.contact .deer {
+
+    right: 8%;
+
+    bottom: 15%;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        25px 8%;
+
+    background:
+        var(--brown-dark);
+
+    color:
+        #cbbcb4;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background:
+            var(--white);
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 20px;
+
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+
+        padding:
+            140px 7% 90px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 65px;
+
+        letter-spacing: -3px;
+
+    }
+
+    .hero-bunny {
+
+        left: 2%;
+
+        opacity: .4;
+
+    }
+
+    .hero-deer {
+
+        right: 2%;
+
+        opacity: .4;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+    .about-image {
+
+        min-height: 330px;
+
+    }
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .section {
+
+        padding:
+            85px 7%;
+
+    }
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
+
+.project-card,
+.timeline-item,
+.about-content,
+.about-image {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+.project-card.visible,
+.timeline-item.visible,
+.about-content.visible,
+.about-image.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+/* =====================================
+   HERO: TEXT LEFT, PICTURE RIGHT
+===================================== */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Keep the text on the left */
+.hero-content {
+    flex: 1;
+    max-width: 760px;
+    min-width: 0;
+    z-index: 5;
+}
+
+/* Picture container */
+.hero-image {
+    flex: 0 0 38%;
+    max-width: 440px;
+    height: 520px;
+    position: relative;
+    z-index: 3;
+    margin-right: 2%;
+}
+
+/* Soft decorative background behind the picture */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 20px -15px -15px 15px;
+    background: #e8d8c8;
+    border-radius: 48% 48% 25px 25px;
+    z-index: -1;
+}
+
+/* Your actual picture */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 48% 48% 25px 25px;
+    border: 7px solid #fffdf9;
+    box-shadow: 0 20px 45px rgba(74, 48, 38, 0.12);
+}
+
+/* Mobile layout */
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 130px;
+        gap: 45px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: min(100%, 350px);
+        height: 400px;
+        flex: none;
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 10vw, 65px);
+        letter-spacing: -2px;
+    }
+}
+
+/* Project image area */
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 325px;
+    overflow: hidden;
+    background: #fffdf9;
+    display: block;
+    border-radius: 0;
+}
+
+/* Remove the decorative circle */
+.project-image::before {
+    display: none;
+    content: none;
+}
+
+/* Actual project image */
+.project-image .project-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+/* Subtle hover effect */
+.project-card:hover .project-cover {
+    transform: scale(1.02);
+}
+
+/* Keep the project number visible */
+.project-image .project-number {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 5;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .project-image {
+        height: 260px;
+    }
+}
+
+
+
